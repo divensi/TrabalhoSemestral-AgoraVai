@@ -19,7 +19,7 @@ public class ZombieWalk : MonoBehaviour
     private AudioSource audioSourceAttack;
     private AudioSource audioSourceGrito;
     private Color cor = Color.black;
-    private float zombieDistance = 50;
+    private float zombieDistance = 80;
     private bool ativarCarregamento;
     private float tempoCarregamento;
     public Texture textura;
@@ -81,9 +81,10 @@ public class ZombieWalk : MonoBehaviour
         if(agente.isOnNavMesh){
         	if(Vector3.Distance (Player.transform.position,  transform.position  ) > zombieDistance){
                 agente.isStopped= true;
-                animator.SetBool("Idle", true);
+                //animator.SetBool("Idle", true);
                 SpawnRandomZombie();
-                Destroy(gameObject);
+                //SpawnNewZombie();
+                //Destroy(gameObject);
                 return;
             }
             if (morreu){
@@ -108,7 +109,10 @@ public class ZombieWalk : MonoBehaviour
             if(!walking){
             	 if (Player != null) {
                     var distancia = 2.5;
-                    if(gameObject.CompareTag("Zombie2")) distancia = 2;
+                    if(gameObject.CompareTag("Zombie2")){
+                        distancia = 3;
+                        Debug.Log(distancia);
+                        }
 
     	        	if(Vector3.Distance (Player.transform.position,  transform.position  ) <= distancia && ativarCarregamento== false){ // distancia, isso permite pular e nao morrer
     	        		// ToDo: adicionar animação de morte ( tela ficar escura, som de tripas sendo estouradas)
@@ -195,7 +199,38 @@ public class ZombieWalk : MonoBehaviour
         Destroy(gameObject,5.0f);
     }
 
-    private void SpawnRandomZombie()
+private void SpawnRandomZombie()
+    {
+
+            Transform closest = spawnPoints.GetChild(0);
+            // Find the closest spawn point.
+            for (int i = 0; i < spawnPoints.childCount; ++i)
+            {
+                Transform thisTransform = spawnPoints.GetChild(i);
+                float distanceToClosest = Vector3.Distance(closest.position, Player.transform.position);
+                float distanceToThis = Vector3.Distance(thisTransform.position, Player.transform.position);
+
+                if (distanceToThis < distanceToClosest)
+                {
+                    closest = thisTransform;
+                }
+            }
+            GameObject instance;
+            NavMeshHit hit;
+            
+            if(NavMesh.SamplePosition(new Vector3(closest.position.x+Random.Range(0.0f, 20f), closest.position.y+Random.Range(0.0f, 1f), closest.position.z+Random.Range(0.0f, 10f)), out hit, 20f, NavMesh.AllAreas)){
+                gameObject.transform.position= hit.position;
+            }
+            else{
+                Debug.Log("instanciou do jeito errado");
+
+                gameObject.transform.position = new Vector3(closest.position.x, closest.position.y + 0.4f, closest.position.z);
+            }
+
+        }
+
+         
+    /*private void SpawnRandomZombie()
     {
         
             Transform closest = spawnPoints.GetChild(0);
@@ -223,17 +258,18 @@ public class ZombieWalk : MonoBehaviour
                 //Debug.Log(transformList.Count);
                 closest = transformList[Random.Range(0, transformList.Count)];
                 NavMeshHit hit;
-                if(NavMesh.SamplePosition(new Vector3(closest.position.x+Random.Range(0.0f, 1.5f), closest.position.y+Random.Range(0.0f, 1.5f), closest.position.z+Random.Range(0.0f, 1.5f)), out hit, 2.0f, NavMesh.AllAreas)){
+                if(NavMesh.SamplePosition(new Vector3(closest.position.x+Random.Range(0.0f, 5f), closest.position.y+Random.Range(0.0f, 1.5f), closest.position.z+Random.Range(0.0f, 5f)), out hit, 200.0f, NavMesh.AllAreas)){
                     instance.transform.position= hit.position;
                 }
                 else{
+                    
                     //instanciar o zombie
                     instance.transform.position = new Vector3(closest.position.x+Random.Range(0.0f, 0.5f), closest.position.y + 0.4f+Random.Range(0.0f, 0.2f), closest.position.z +Random.Range(0.0f, 0.5f));
                     //transform.position = new Vector3(transform.position.x+Random.Range(0.0f, 0.5f), transform.position.y+Random.Range(0.0f, 0.5f), transform.position.z+Random.Range(0.0f, 0.5f)); 
                     
                 }
             }
-        }
+        }*/
 
         
         
@@ -268,10 +304,11 @@ public class ZombieWalk : MonoBehaviour
             } 
 
             
-            if(NavMesh.SamplePosition(new Vector3(closest.position.x, closest.position.y, closest.position.z), out hit, 1.0f, NavMesh.AllAreas)){
+            if(NavMesh.SamplePosition(new Vector3(closest.position.x+Random.Range(0.0f, 30f), closest.position.y+Random.Range(0.0f, 1f), closest.position.z+Random.Range(0.0f, 30f)), out hit, 20f, NavMesh.AllAreas)){
                 instance.transform.position= hit.position;
             }
             else{
+                Debug.Log("instanciou do jeito errado");
 
                 instance.transform.position = new Vector3(closest.position.x, closest.position.y + 0.4f, closest.position.z);
             }
