@@ -15,9 +15,10 @@ public class HitableBodyPart : MonoBehaviour {
     [SerializeField]private BodyIdentification bodyIdentification;
     private CharaterDamage charaterDamage;
     Animator animator;
-    float life;
+    private ZombieChefoesLifeControll gameControl;
     void Start(){
-        life = 100f;
+        gameControl=  gameObject.GetComponentInParent(typeof(ZombieChefoesLifeControll)) as ZombieChefoesLifeControll;
+        //Debug.Log(gameControl);
     }
     private void Awake()
     {
@@ -31,10 +32,30 @@ public class HitableBodyPart : MonoBehaviour {
         Debug.Log("collision "+gameObject.tag);
         if(gameObject.CompareTag("chefao")){
             var objectRB = collision.gameObject.GetComponent<Rigidbody>();
-            life -= objectRB.mass;
-            Debug.Log(life);
+            gameControl.AddHit1(objectRB.mass);
+            if(gameControl.GetLife1() <=0 ){
+                animator.SetBool("Walk", false);
+                animator.SetBool("Attack",  false);
+                animator.SetBool("Die", true);
+                //você venceu
                 
-         }else{ //normal zombie kill 
+            }
+            Debug.Log(gameControl.GetLife1());
+                
+         }else if (gameObject.CompareTag("chefao2")){
+
+            var objectRB = collision.gameObject.GetComponent<Rigidbody>();
+            gameControl.AddHit2(objectRB.mass);
+            if(gameControl.GetLife2() <=0 ){
+                animator.SetBool("Walk", false);
+                animator.SetBool("Attack",  false);
+                animator.SetBool("Die", true);
+                //você venceu
+                
+            }
+            Debug.Log(gameControl.GetLife2());
+          }   
+            else{ //normal zombie kill 
             //charaterDamage.OnBeingHit(bodyIdentification);
             animator.SetBool("Walk", false);
             animator.SetBool("Attack",  false);

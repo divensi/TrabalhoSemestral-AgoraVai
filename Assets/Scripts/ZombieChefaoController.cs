@@ -25,15 +25,16 @@ public class ZombieChefaoController : MonoBehaviour
     public Texture textura;
     private bool inPause;
     private Object obSpawnPoints;
-    private Transform spawnPoints;
+    //private Transform spawnPoints;
 
     
 
     private IEnumerator WaitForSceneLoad() 
     {
 	    yield return new WaitForSeconds(3);
-	    //SceneManager.LoadScene(0); 
+            PlayerPrefs.SetFloat("energy", 0.0f);
 	    Application.LoadLevel (0);
+            
  	}
 
 
@@ -54,7 +55,7 @@ public class ZombieChefaoController : MonoBehaviour
         audioSourceGrito = audioSources[2]; // grito
 
 
-        spawnPoints = GameObject.Find ("ZombiesSpawnPoints").transform;
+        //spawnPoints = GameObject.Find ("ZombiesSpawnPoints").transform;
         //dar tapa no zombie
 
     }
@@ -80,7 +81,7 @@ public class ZombieChefaoController : MonoBehaviour
                 agente.isStopped= true;
                 animator.SetBool("Idle", true);
                 //SpawnRandomZombie();
-                Destroy(gameObject);
+                //Destroy(gameObject);
                 return;
             }
             if (morreu){
@@ -152,6 +153,7 @@ public class ZombieChefaoController : MonoBehaviour
 
         	if(tempoCarregamento>=5){
         		ativarCarregamento = false;
+                        PlayerPrefs.SetFloat("energy", 0.0f);
         		Application.LoadLevel(0);
         	}
         }

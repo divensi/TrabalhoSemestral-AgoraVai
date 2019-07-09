@@ -32,7 +32,8 @@ public class ZombieWalk : MonoBehaviour
     private IEnumerator WaitForSceneLoad() 
     {
 	    yield return new WaitForSeconds(3);
-	    //SceneManager.LoadScene(0); 
+	    //SceneManager.LoadScene(0);
+            PlayerPrefs.SetFloat("energy", 0.0f);
 	    Application.LoadLevel (0);
  	}
 
@@ -155,6 +156,7 @@ public class ZombieWalk : MonoBehaviour
 
         	if(tempoCarregamento>=5){
         		ativarCarregamento = false;
+                        PlayerPrefs.SetFloat("energy", 0.0f);
         		Application.LoadLevel(0);
         	}
         }

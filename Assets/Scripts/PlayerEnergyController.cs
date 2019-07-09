@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerEnergyController : MonoBehaviour
 {
-	private  static float power= 0.0f;
+    private  static float power;
     private  static float scale= 1.0f;
     //Updatepower ();
     void Start(){
-
-        power= 2.0f;
+        
+        if(power <= 0){ 
+            power= 2.0f;
+            
+        }
         scale= 1.0f;
 
     }
@@ -42,5 +45,18 @@ public class PlayerEnergyController : MonoBehaviour
         //*scale usado para permitir na fase final com o poder de aumento de scala poder pegar objetos com grande massa.
         return power*scale;
      
+    }
+
+    void OnDisable()
+        {
+            PlayerPrefs.SetFloat("energy", power);
+            //Debug.Log("Energy no disable:");
+            //Debug.Log(power);
+        }
+    void OnEnable()
+    {
+        power  =  PlayerPrefs.GetFloat("energy");
+        //Debug.Log("Energy no enable:");
+        //Debug.Log(power);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 public class GravityGun : MonoBehaviour
 {
     public Camera cam;
@@ -50,6 +51,12 @@ public class GravityGun : MonoBehaviour
     }
     //Screen.showCursor = false;
     //Screen.lockCursor = true;
+     if(Input.GetKeyDown("c"))     
+     {
+            Application.LoadLevel(2);
+        //SceneManager.LoadScene(2);
+        //Debug.Log("test");
+     }
      if(Input.GetKeyDown("escape"))     
      {
                  
