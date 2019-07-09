@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 2727380981825172234}
   m_Layer: 0
   m_Name: Bone_003_L_005
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 2727380981825172236}
   m_Layer: 0
   m_Name: Bone_003_R_005
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 2727380981825172238}
   m_Layer: 0
   m_Name: spine01
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 2727380981825172276}
   m_Layer: 0
   m_Name: chest
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 2727380981825172278}
   m_Layer: 0
   m_Name: neck
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 2727380981825172284}
   m_Layer: 0
   m_Name: head
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 2727380981825172286}
   m_Layer: 0
   m_Name: jaw
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1141,7 +1141,7 @@ GameObject:
   - component: {fileID: 2727380981825172230}
   m_Layer: 0
   m_Name: toe_2_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 2727380981825172232}
   m_Layer: 0
   m_Name: toe_2_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 2727380981825172308}
   m_Layer: 0
   m_Name: f_07_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 2727380981825172310}
   m_Layer: 0
   m_Name: f_08_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1293,7 +1293,7 @@ GameObject:
   - component: {fileID: 2727380981825172266}
   m_Layer: 0
   m_Name: f_09_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 2727380981825172312}
   m_Layer: 0
   m_Name: f_10_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 2727380981825172314}
   m_Layer: 0
   m_Name: f_11_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1385,7 +1385,7 @@ GameObject:
   - component: {fileID: 2727380981825172268}
   m_Layer: 0
   m_Name: f_12_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 2727380981825172316}
   m_Layer: 0
   m_Name: f_13_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 2727380981825172318}
   m_Layer: 0
   m_Name: f_14_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 2727380981825172280}
   m_Layer: 0
   m_Name: shoulder_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1508,7 +1508,7 @@ GameObject:
   - component: {fileID: 2727380981825172256}
   m_Layer: 0
   m_Name: upper_arm_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1539,7 +1539,7 @@ GameObject:
   - component: {fileID: 2727380981825172258}
   m_Layer: 0
   m_Name: forearm_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1570,7 +1570,7 @@ GameObject:
   - component: {fileID: 2727380981825172260}
   m_Layer: 0
   m_Name: hand_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1605,7 +1605,7 @@ GameObject:
   - component: {fileID: 2727380981825172262}
   m_Layer: 0
   m_Name: f_03_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1636,7 +1636,7 @@ GameObject:
   - component: {fileID: 2727380981825172304}
   m_Layer: 0
   m_Name: f_04_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1667,7 +1667,7 @@ GameObject:
   - component: {fileID: 2727380981825172306}
   m_Layer: 0
   m_Name: f_05_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1697,7 +1697,7 @@ GameObject:
   - component: {fileID: 2727380981825172264}
   m_Layer: 0
   m_Name: f_06_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1728,7 +1728,7 @@ GameObject:
   - component: {fileID: 2727380981825172340}
   m_Layer: 0
   m_Name: f_05_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 2727380981825172298}
   m_Layer: 0
   m_Name: f_06_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1789,7 +1789,7 @@ GameObject:
   - component: {fileID: 2727380981825172342}
   m_Layer: 0
   m_Name: f_07_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 2727380981825172344}
   m_Layer: 0
   m_Name: f_08_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1850,7 +1850,7 @@ GameObject:
   - component: {fileID: 2727380981825172300}
   m_Layer: 0
   m_Name: f_09_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1881,7 +1881,7 @@ GameObject:
   - component: {fileID: 2727380981825172346}
   m_Layer: 0
   m_Name: f_10_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 2727380981825172348}
   m_Layer: 0
   m_Name: f_11_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1942,7 +1942,7 @@ GameObject:
   - component: {fileID: 2727380981825172302}
   m_Layer: 0
   m_Name: f_12_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1973,7 +1973,7 @@ GameObject:
   - component: {fileID: 2727380981825172270}
   m_Layer: 0
   m_Name: f_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2004,7 +2004,7 @@ GameObject:
   - component: {fileID: 2727380981825172288}
   m_Layer: 0
   m_Name: f_02_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2034,7 +2034,7 @@ GameObject:
   - component: {fileID: 2727380981825172282}
   m_Layer: 0
   m_Name: shoulder_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2065,7 +2065,7 @@ GameObject:
   - component: {fileID: 2727380981825172290}
   m_Layer: 0
   m_Name: upper_arm_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2096,7 +2096,7 @@ GameObject:
   - component: {fileID: 2727380981825172292}
   m_Layer: 0
   m_Name: forearm_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2127,7 +2127,7 @@ GameObject:
   - component: {fileID: 2727380981825172294}
   m_Layer: 0
   m_Name: hand_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 2727380981825172296}
   m_Layer: 0
   m_Name: f_03_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2193,7 +2193,7 @@ GameObject:
   - component: {fileID: 2727380981825172338}
   m_Layer: 0
   m_Name: f_04_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2224,7 +2224,7 @@ GameObject:
   - component: {fileID: 2727380981825172274}
   m_Layer: 0
   m_Name: thigh_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2255,7 +2255,7 @@ GameObject:
   - component: {fileID: 2727380981825172330}
   m_Layer: 0
   m_Name: shin_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2286,7 +2286,7 @@ GameObject:
   - component: {fileID: 2727380981825172332}
   m_Layer: 0
   m_Name: foot_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2317,7 +2317,7 @@ GameObject:
   - component: {fileID: 2727380981825172334}
   m_Layer: 0
   m_Name: toe_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2467,7 +2467,7 @@ GameObject:
   - component: {fileID: 2727380981825172350}
   m_Layer: 0
   m_Name: f_13_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2498,7 +2498,7 @@ GameObject:
   - component: {fileID: 2727380981825172320}
   m_Layer: 0
   m_Name: f_14_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2528,7 +2528,7 @@ GameObject:
   - component: {fileID: 2727380981825172336}
   m_Layer: 0
   m_Name: f_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2559,7 +2559,7 @@ GameObject:
   - component: {fileID: 2727380981825172322}
   m_Layer: 0
   m_Name: f_02_R
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2589,7 +2589,7 @@ GameObject:
   - component: {fileID: 2727380981825172272}
   m_Layer: 0
   m_Name: thigh_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2620,7 +2620,7 @@ GameObject:
   - component: {fileID: 2727380981825172324}
   m_Layer: 0
   m_Name: shin_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2651,7 +2651,7 @@ GameObject:
   - component: {fileID: 2727380981825172326}
   m_Layer: 0
   m_Name: foot_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2682,7 +2682,7 @@ GameObject:
   - component: {fileID: 2727380981825172328}
   m_Layer: 0
   m_Name: toe_L
-  m_TagString: Zombie
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2714,7 +2714,7 @@ GameObject:
   - component: {fileID: 1602315220864549125}
   m_Layer: 10
   m_Name: Sphere
-  m_TagString: Minimapa
+  m_TagString: chefao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
