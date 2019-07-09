@@ -19,7 +19,7 @@ public class ZombieWalk : MonoBehaviour
     private AudioSource audioSourceAttack;
     private AudioSource audioSourceGrito;
     private Color cor = Color.black;
-    private float zombieDistance = 80;
+    private float zombieDistance = 45;
     private bool ativarCarregamento;
     private float tempoCarregamento;
     public Texture textura;
@@ -204,24 +204,28 @@ private void SpawnRandomZombie()
 
             Transform closest = spawnPoints.GetChild(0);
             // Find the closest spawn point.
+            List<Transform> transformList = new List<Transform>();  
             for (int i = 0; i < spawnPoints.childCount; ++i)
             {
                 Transform thisTransform = spawnPoints.GetChild(i);
                 float distanceToClosest = Vector3.Distance(closest.position, Player.transform.position);
                 float distanceToThis = Vector3.Distance(thisTransform.position, Player.transform.position);
 
-                if (distanceToThis < distanceToClosest)
+                if (distanceToThis < 40)
                 {
-                    closest = thisTransform;
+                    transformList.Add(thisTransform);
                 }
             }
-            GameObject instance;
-            NavMeshHit hit;
             
-            if(NavMesh.SamplePosition(new Vector3(closest.position.x+Random.Range(0.0f, 20f), closest.position.y+Random.Range(0.0f, 1f), closest.position.z+Random.Range(0.0f, 10f)), out hit, 20f, NavMesh.AllAreas)){
-                gameObject.transform.position= hit.position;
-            }
-            else{
+            NavMeshHit hit;
+            closest = transformList[Random.Range(0, transformList.Count)];
+            if( transformList.Count > 0){
+                if(NavMesh.SamplePosition(new Vector3(closest.position.x+Random.Range(0.0f, 20f), closest.position.y+Random.Range(0.0f, 1f), closest.position.z+Random.Range(0.0f, 10f)), out hit, 20f, NavMesh.AllAreas)){
+                    gameObject.transform.position= hit.position;
+                }
+
+              
+            }else{
                 Debug.Log("instanciou do jeito errado");
 
                 gameObject.transform.position = new Vector3(closest.position.x, closest.position.y + 0.4f, closest.position.z);
