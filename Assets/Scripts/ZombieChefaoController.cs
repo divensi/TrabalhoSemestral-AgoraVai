@@ -27,7 +27,7 @@ public class ZombieChefaoController : MonoBehaviour
     private bool inPause;
     private Object obSpawnPoints;
     //private Transform spawnPoints;
-
+    private GameObject CanvasObject;
     
 
     private IEnumerator WaitForSceneLoad() 
@@ -46,6 +46,9 @@ public class ZombieChefaoController : MonoBehaviour
         morreu = false;
         tempoCarregamento = 0.0f;
         ativarCarregamento=false;
+        CanvasObject = GameObject.Find("Canvas-Morte");
+        CanvasObject.GetComponent<Canvas>().enabled = false;
+        
         Player = GameObject.FindGameObjectWithTag("Player");
         agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
@@ -114,6 +117,7 @@ public class ZombieChefaoController : MonoBehaviour
      					audioSourceAttack.Play();
      					audioSourceGrito.Play();
     	        		ativarCarregamento = true;
+                                CanvasObject.GetComponent<Canvas>().enabled = true;                                                                                                           
     	        		//chamar a cena do menu
     	        		//StartCoroutine(WaitForSceneLoad());
          
@@ -151,7 +155,7 @@ public class ZombieChefaoController : MonoBehaviour
 
         	tempoCarregamento += Time.deltaTime;
 
-        	if(tempoCarregamento>=15){
+        	if(tempoCarregamento>=5){
         		ativarCarregamento = false;
                         PlayerPrefs.SetFloat("energy", 0.0f);
         		Application.LoadLevel(0);

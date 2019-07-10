@@ -50,11 +50,11 @@ public class ZombieChefoesLifeControll : MonoBehaviour
 
     
     }
-    /*void OnGUI(){
+    void OnGUI(){
     	cor.a =(int)(tempoCarregamento);
     	GUI.color = cor;
     	GUI.DrawTexture(new Rect (0,0,Screen.width,Screen.height),textura);
-    }*/
+    }
     
     
     private void CheckAlive()
