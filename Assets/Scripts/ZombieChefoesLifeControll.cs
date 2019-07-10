@@ -26,8 +26,8 @@ public class ZombieChefoesLifeControll : MonoBehaviour
         CanvasObject.GetComponent<Canvas>().enabled = false;
         
         
-        lifez1= 10f;
-        lifez2= 10f;
+        lifez1= 100f;
+        lifez2= 100f;
 
         
         
