@@ -10,7 +10,7 @@ public class ZombieChefoesLifeControll : MonoBehaviour
     private bool ativarCarregamento;
     private float tempoCarregamento;
     public Texture textura;
-    
+    private Color cor = Color.black;
   
     
     void Start(){
@@ -38,6 +38,12 @@ public class ZombieChefoesLifeControll : MonoBehaviour
 
     
     }
+    void OnGUI(){
+    	cor.a =(int)(tempoCarregamento);
+    	GUI.color = cor;
+    	GUI.DrawTexture(new Rect (0,0,Screen.width,Screen.height),textura);
+    }
+    
     
     private void CheckAlive()
     {

@@ -79,7 +79,7 @@ public class ZombieChefaoController : MonoBehaviour
         if(agente.isOnNavMesh){
         	if(Vector3.Distance (Player.transform.position,  transform.position  ) > zombieDistance){
                 agente.isStopped= true;
-                animator.SetBool("Idle", true);
+                //animator.SetBool("Idle", true);
                 //SpawnRandomZombie();
                 //Destroy(gameObject);
                 return;

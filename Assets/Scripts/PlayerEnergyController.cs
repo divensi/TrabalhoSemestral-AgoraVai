@@ -35,7 +35,7 @@ public class PlayerEnergyController : MonoBehaviour
     }
     public  void AddPower (float valor)
     {
-        power += valor;
+        power += valor*scale;
     }
 
     public  void RemovePower (float valor)
@@ -65,6 +65,6 @@ public class PlayerEnergyController : MonoBehaviour
     void LateUpdate()
     {
         if (indicadorPoder != null)
-            indicadorPoder.text = "" + power;
+            indicadorPoder.text = "" + power*scale;
     }
 }
