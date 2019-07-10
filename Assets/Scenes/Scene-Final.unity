@@ -26398,6 +26398,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.5350001
       objectReference: {fileID: 0}
+    - target: {fileID: 5258132185719086499, guid: 7bdbffb7f6b73434db5c82115e34b15f,
+        type: 3}
+      propertyPath: textura
+      value: 
+      objectReference: {fileID: 8400000, guid: 844e3772e184c40b5a992a6f5e97999d, type: 2}
+    - target: {fileID: 6528184355023868337, guid: 7bdbffb7f6b73434db5c82115e34b15f,
+        type: 3}
+      propertyPath: textura
+      value: 
+      objectReference: {fileID: 2800000, guid: 813a657125a47e54a8e5cc459df94389, type: 3}
+    - target: {fileID: 7633858264936876300, guid: 7bdbffb7f6b73434db5c82115e34b15f,
+        type: 3}
+      propertyPath: textura
+      value: 
+      objectReference: {fileID: 2800000, guid: 813a657125a47e54a8e5cc459df94389, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bdbffb7f6b73434db5c82115e34b15f, type: 3}
 --- !u!1001 &973368089
@@ -55380,6 +55395,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.5350001
       objectReference: {fileID: 0}
+    - target: {fileID: 5013201094067474051, guid: 64c76ced77e853d3db6124e0b331bc32,
+        type: 3}
+      propertyPath: textura
+      value: 
+      objectReference: {fileID: 2800000, guid: fb4e7b0c8665b7d43a71d5f3ac9605f3, type: 3}
+    - target: {fileID: 5013201094067474050, guid: 64c76ced77e853d3db6124e0b331bc32,
+        type: 3}
+      propertyPath: textura
+      value: 
+      objectReference: {fileID: 2800000, guid: fb4e7b0c8665b7d43a71d5f3ac9605f3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64c76ced77e853d3db6124e0b331bc32, type: 3}
 --- !u!1001 &2118177543
@@ -56550,41 +56575,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 823
-      objectReference: {fileID: 0}
-    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.060742237
-      objectReference: {fileID: 0}
-    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.06280159
-      objectReference: {fileID: 0}
-    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.066037714
-      objectReference: {fileID: 0}
-    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
-        type: 3}
-      propertyPath: m_Depth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
-        type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5714601561658396438, guid: db7083dfa32a84d93a3ceef0283ccfe4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56654,6 +56644,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 823
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.060742237
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.06280159
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.066037714
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
+        type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714601561658888470, guid: db7083dfa32a84d93a3ceef0283ccfe4,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5714601561658396436, guid: db7083dfa32a84d93a3ceef0283ccfe4,
         type: 3}
