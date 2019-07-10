@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerEnergyController : MonoBehaviour
 {
+    public Text indicadorPoder;
     private  static float power;
     private  static float scale= 1.0f;
     //Updatepower ();
@@ -58,5 +60,11 @@ public class PlayerEnergyController : MonoBehaviour
         power  =  PlayerPrefs.GetFloat("energy");
         //Debug.Log("Energy no enable:");
         //Debug.Log(power);
+    }
+
+    void LateUpdate()
+    {
+        if (indicadorPoder != null)
+            indicadorPoder.text = "" + power;
     }
 }

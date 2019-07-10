@@ -13,7 +13,7 @@ public class ZombieWalk : MonoBehaviour
     Animator animator;
     private Vector3 posicaoAnterior;
     private Vector3 posicaoNova;
-    private GameObject Player; 
+    private GameObject Player;
     private bool morreu;
     private AudioSource audioSource;
     private AudioSource audioSourceAttack;
@@ -27,15 +27,15 @@ public class ZombieWalk : MonoBehaviour
     private Object obSpawnPoints;
     private Transform spawnPoints;
 
-    
 
-    private IEnumerator WaitForSceneLoad() 
+
+    private IEnumerator WaitForSceneLoad()
     {
-	    yield return new WaitForSeconds(3);
-	    //SceneManager.LoadScene(0);
-            PlayerPrefs.SetFloat("energy", 0.0f);
-	    Application.LoadLevel (0);
- 	}
+        yield return new WaitForSeconds(3);
+        //SceneManager.LoadScene(0);
+        PlayerPrefs.SetFloat("energy", 0.0f);
+        Application.LoadLevel(0);
+    }
 
 
 
@@ -44,7 +44,7 @@ public class ZombieWalk : MonoBehaviour
         inPause = false;
         morreu = false;
         tempoCarregamento = 0.0f;
-        ativarCarregamento=false;
+        ativarCarregamento = false;
         Player = GameObject.FindGameObjectWithTag("Player");
         agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
@@ -55,12 +55,12 @@ public class ZombieWalk : MonoBehaviour
         audioSourceGrito = audioSources[2]; // grito
 
 
-        spawnPoints = GameObject.Find ("ZombiesSpawnPoints").transform;
+        spawnPoints = GameObject.Find("ZombiesSpawnPoints").transform;
         //dar tapa no zombie
 
     }
 
-   
+
 
     /*private void OnCollisionEnter(Collision collision)
     {
@@ -77,112 +77,129 @@ public class ZombieWalk : MonoBehaviour
     } */
 
     void UpdateZombieDestination()
-    {   
-        if(agente.isOnNavMesh){
-        	if(Vector3.Distance (Player.transform.position,  transform.position  ) > zombieDistance){
-                agente.isStopped= true;
+    {
+        if (agente.isOnNavMesh)
+        {
+            if (Vector3.Distance(Player.transform.position, transform.position) > zombieDistance)
+            {
+                agente.isStopped = true;
                 //animator.SetBool("Idle", true);
                 SpawnRandomZombie();
                 //SpawnNewZombie();
                 //Destroy(gameObject);
                 return;
             }
-            if (morreu){
+            if (morreu)
+            {
                 return;
             }
-            if(agente.isStopped == true){
-                agente.isStopped= false;
+            if (agente.isStopped == true)
+            {
+                agente.isStopped = false;
 
-                }
+            }
 
-            
-            if (Player != null) {
-                agente.destination = Player.transform.position; 
+
+            if (Player != null)
+            {
+                agente.destination = Player.transform.position;
             }
 
             posicaoNova = agente.nextPosition;
             Walking();
-            if (!animator.GetBool("Die")){
-            animator.SetBool("Walk", walking);
-            animator.SetBool("Attack", !walking);
+            if (!animator.GetBool("Die"))
+            {
+                animator.SetBool("Walk", walking);
+                animator.SetBool("Attack", !walking);
             }
-            if(!walking){
-            	 if (Player != null) {
+            if (!walking)
+            {
+                if (Player != null)
+                {
                     var distancia = 2.5;
-                    if(gameObject.CompareTag("Zombie2")){
+                    if (gameObject.CompareTag("Zombie2"))
+                    {
                         distancia = 3;
                         Debug.Log(distancia);
-                        }
+                    }
 
-    	        	if(Vector3.Distance (Player.transform.position,  transform.position  ) <= distancia && ativarCarregamento== false){ // distancia, isso permite pular e nao morrer
-    	        		// ToDo: adicionar animação de morte ( tela ficar escura, som de tripas sendo estouradas)
-    	        		audioSource.Stop();
-     					audioSourceAttack.Play();
-     					audioSourceGrito.Play();
-    	        		ativarCarregamento = true;
-    	        		//chamar a cena do menu
-    	        		//StartCoroutine(WaitForSceneLoad());
-         
+                    if (Vector3.Distance(Player.transform.position, transform.position) <= distancia && ativarCarregamento == false)
+                    { // distancia, isso permite pular e nao morrer
+                      // ToDo: adicionar animação de morte ( tela ficar escura, som de tripas sendo estouradas)
+                        audioSource.Stop();
+                        audioSourceAttack.Play();
+                        audioSourceGrito.Play();
+                        ativarCarregamento = true;
+                        //chamar a cena do menu
+                        //StartCoroutine(WaitForSceneLoad());
 
-    	        	}
-    	        }	
-            	
+
+                    }
+                }
+
             }
         }
-    }   
+    }
 
-    void OnGUI(){
-    	cor.a =(int)(tempoCarregamento);
-    	GUI.color = cor;
-    	GUI.DrawTexture(new Rect (0,0,Screen.width,Screen.height),textura);
+    void OnGUI()
+    {
+        cor.a = (int)(tempoCarregamento);
+        GUI.color = cor;
+        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), textura);
     }
 
 
     void Update()
     {
-        
-         //if (animator.GetCurrentAnimatorStateInfo(0).IsName("Die") || animator.GetCurrentAnimatorStateInfo(0).IsName("down")){
-        if (animator.GetBool("Die") && !morreu){
+
+        //if (animator.GetCurrentAnimatorStateInfo(0).IsName("Die") || animator.GetCurrentAnimatorStateInfo(0).IsName("down")){
+        if (animator.GetBool("Die") && !morreu)
+        {
             Debug.Log("MORREU");
             SpawnNewZombie();
             morreu = true;
             audioSource.Stop();
-            if(agente.isOnNavMesh){
+            if (agente.isOnNavMesh)
+            {
                 agente.isStopped = true;
             }
-            
+
             Die();
-        } 
-        
-        if (ativarCarregamento == true){
-
-        	tempoCarregamento += Time.deltaTime;
-
-        	if(tempoCarregamento>=5){
-        		ativarCarregamento = false;
-                        PlayerPrefs.SetFloat("energy", 0.0f);
-        		Application.LoadLevel(0);
-        	}
         }
-        
+
+        if (ativarCarregamento == true)
+        {
+
+            tempoCarregamento += Time.deltaTime;
+
+            if (tempoCarregamento >= 5)
+            {
+                ativarCarregamento = false;
+                PlayerPrefs.SetFloat("energy", 0.0f);
+                Application.LoadLevel(0);
+            }
+        }
+
         //pause sound in menu
-        
+
         if (Time.timeScale != 1.0f && inPause == false)
-         {
+        {
             inPause = true;
             audioSource.Stop();//zombie som
             audioSourceAttack.Stop(); // attack
             audioSourceGrito.Stop(); // grito
 
-         }else if (Time.timeScale == 1.0f && inPause == true){
-            
+        }
+        else if (Time.timeScale == 1.0f && inPause == true)
+        {
+
             inPause = false;
             audioSource.Play();
-         }
-        
+        }
+
     }
     private void Walking()
-    {   
+    {
         if ((agente.nextPosition != Player.transform.position) && (posicaoAnterior != posicaoNova))
         {
             walking = true;
@@ -196,44 +213,49 @@ public class ZombieWalk : MonoBehaviour
     }
     private void Die()
     {
-        Destroy(gameObject,5.0f);
+        Destroy(gameObject, 5.0f);
     }
 
-private void SpawnRandomZombie()
+    private void SpawnRandomZombie()
     {
 
-            Transform closest = spawnPoints.GetChild(0);
-            // Find the closest spawn point.
-            List<Transform> transformList = new List<Transform>();  
-            for (int i = 0; i < spawnPoints.childCount; ++i)
+        Transform closest = spawnPoints.GetChild(0);
+        // Find the closest spawn point.
+        List<Transform> transformList = new List<Transform>();
+        for (int i = 0; i < spawnPoints.childCount; i++)
+        {
+            Transform thisTransform = spawnPoints.GetChild(i);
+            float distanceToClosest = Vector3.Distance(closest.position, Player.transform.position);
+            float distanceToThis = Vector3.Distance(thisTransform.position, Player.transform.position);
+
+            if (distanceToThis < 40)
             {
-                Transform thisTransform = spawnPoints.GetChild(i);
-                float distanceToClosest = Vector3.Distance(closest.position, Player.transform.position);
-                float distanceToThis = Vector3.Distance(thisTransform.position, Player.transform.position);
-
-                if (distanceToThis < 40)
-                {
-                    transformList.Add(thisTransform);
-                }
+                transformList.Add(thisTransform);
             }
-            
-            NavMeshHit hit;
-            closest = transformList[Random.Range(0, transformList.Count)];
-            if( transformList.Count > 0){
-                if(NavMesh.SamplePosition(new Vector3(closest.position.x+Random.Range(0.0f, 20f), closest.position.y+Random.Range(0.0f, 1f), closest.position.z+Random.Range(0.0f, 10f)), out hit, 20f, NavMesh.AllAreas)){
-                    gameObject.transform.position= hit.position;
-                }
-
-              
-            }else{
-                Debug.Log("instanciou do jeito errado");
-
-                gameObject.transform.position = new Vector3(closest.position.x, closest.position.y + 0.4f, closest.position.z);
-            }
-
         }
 
-         
+        NavMeshHit hit;
+        var index = Random.Range(0, transformList.Count - 1);
+        closest = transformList[index >= 0 ? index : 0];
+        if (transformList.Count > 0)
+        {
+            if (NavMesh.SamplePosition(new Vector3(closest.position.x + Random.Range(0.0f, 20f), closest.position.y + Random.Range(0.0f, 1f), closest.position.z + Random.Range(0.0f, 10f)), out hit, 20f, NavMesh.AllAreas))
+            {
+                gameObject.transform.position = hit.position;
+            }
+
+
+        }
+        else
+        {
+            Debug.Log("instanciou do jeito errado");
+
+            gameObject.transform.position = new Vector3(closest.position.x, closest.position.y + 0.4f, closest.position.z);
+        }
+
+    }
+
+
     /*private void SpawnRandomZombie()
     {
         
@@ -275,52 +297,56 @@ private void SpawnRandomZombie()
             }
         }*/
 
-        
-        
+
+
 
 
 
     private void SpawnNewZombie()
     {
 
-            Transform closest = spawnPoints.GetChild(0);
-            // Find the closest spawn point.
-            for (int i = 0; i < spawnPoints.childCount; ++i)
+        Transform closest = spawnPoints.GetChild(0);
+        // Find the closest spawn point.
+        for (int i = 0; i < spawnPoints.childCount; ++i)
+        {
+            Transform thisTransform = spawnPoints.GetChild(i);
+            float distanceToClosest = Vector3.Distance(closest.position, Player.transform.position);
+            float distanceToThis = Vector3.Distance(thisTransform.position, Player.transform.position);
+
+            if (distanceToThis < distanceToClosest)
             {
-                Transform thisTransform = spawnPoints.GetChild(i);
-                float distanceToClosest = Vector3.Distance(closest.position, Player.transform.position);
-                float distanceToThis = Vector3.Distance(thisTransform.position, Player.transform.position);
-
-                if (distanceToThis < distanceToClosest)
-                {
-                    closest = thisTransform;
-                }
+                closest = thisTransform;
             }
-            GameObject instance;
-            NavMeshHit hit;
-
-            if(gameObject.CompareTag("Zombie")){
-                instance = Instantiate(Resources.Load("Zombie", typeof(GameObject))) as GameObject;
-            } 
-            else{
-                instance = Instantiate(Resources.Load("meltyzombie", typeof(GameObject))) as GameObject;
-                instance.transform.localScale +=  new Vector3(1.0f,1.0f,1.0f);
-            } 
-
-            
-            if(NavMesh.SamplePosition(new Vector3(closest.position.x+Random.Range(0.0f, 30f), closest.position.y+Random.Range(0.0f, 1f), closest.position.z+Random.Range(0.0f, 30f)), out hit, 20f, NavMesh.AllAreas)){
-                instance.transform.position= hit.position;
-            }
-            else{
-                Debug.Log("instanciou do jeito errado");
-
-                instance.transform.position = new Vector3(closest.position.x, closest.position.y + 0.4f, closest.position.z);
-            }
-            //instance.transform.position =  closest.position;
-            
-            //instanciar o zombie
-
         }
+        GameObject instance;
+        NavMeshHit hit;
+
+        if (gameObject.CompareTag("Zombie"))
+        {
+            instance = Instantiate(Resources.Load("Zombie", typeof(GameObject))) as GameObject;
+        }
+        else
+        {
+            instance = Instantiate(Resources.Load("meltyzombie", typeof(GameObject))) as GameObject;
+            instance.transform.localScale += new Vector3(1.0f, 1.0f, 1.0f);
+        }
+
+
+        if (NavMesh.SamplePosition(new Vector3(closest.position.x + Random.Range(0.0f, 30f), closest.position.y + Random.Range(0.0f, 1f), closest.position.z + Random.Range(0.0f, 30f)), out hit, 20f, NavMesh.AllAreas))
+        {
+            instance.transform.position = hit.position;
+        }
+        else
+        {
+            Debug.Log("instanciou do jeito errado");
+
+            instance.transform.position = new Vector3(closest.position.x, closest.position.y + 0.4f, closest.position.z);
+        }
+        //instance.transform.position =  closest.position;
+
+        //instanciar o zombie
+
+    }
 
 
 }
