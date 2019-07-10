@@ -18,6 +18,7 @@ public class ZombieChefaoController : MonoBehaviour
     private AudioSource audioSource;
     private AudioSource audioSourceAttack;
     private AudioSource audioSourceGrito;
+    private AudioSource audioSourceFim;
     private Color cor = Color.black;
     private float zombieDistance = 50;
     private bool ativarCarregamento;
@@ -53,7 +54,6 @@ public class ZombieChefaoController : MonoBehaviour
         audioSource = audioSources[0];//zombie som
         audioSourceAttack = audioSources[1]; // attack
         audioSourceGrito = audioSources[2]; // grito
-
 
         //spawnPoints = GameObject.Find ("ZombiesSpawnPoints").transform;
         //dar tapa no zombie
@@ -151,7 +151,7 @@ public class ZombieChefaoController : MonoBehaviour
 
         	tempoCarregamento += Time.deltaTime;
 
-        	if(tempoCarregamento>=5){
+        	if(tempoCarregamento>=15){
         		ativarCarregamento = false;
                         PlayerPrefs.SetFloat("energy", 0.0f);
         		Application.LoadLevel(0);

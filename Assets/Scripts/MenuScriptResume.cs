@@ -49,4 +49,8 @@ public class MenuScriptResume : MonoBehaviour
         Time.timeScale = 1.0f; 
 
     }
+     public void Reiniciar()
+    {
+        Application.LoadLevel(1);
+    }
 }

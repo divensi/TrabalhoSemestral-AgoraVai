@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class ZombieChefoesLifeControll : MonoBehaviour
 {
     
@@ -11,14 +12,24 @@ public class ZombieChefoesLifeControll : MonoBehaviour
     private float tempoCarregamento;
     public Texture textura;
     private Color cor = Color.black;
-  
+    private AudioSource audioSourceFim;
+    public Canvas CanvasObject;
     
     void Start(){
+        var audioSources = GetComponents<AudioSource>();
+        //nao mudar localização do som unity bugou e tava tocando do nada
+        audioSourceFim = audioSources[3]; // som de vitoria
+        audioSourceFim.Stop(); //  som de vitoria
+        
         tempoCarregamento = 0.0f;
         ativarCarregamento=false;
+        CanvasObject.GetComponent<Canvas>().enabled = false;
+        
         
         lifez1= 10f;
         lifez2= 10f;
+
+        
         
 
     }
@@ -28,29 +39,38 @@ public class ZombieChefoesLifeControll : MonoBehaviour
 
         	tempoCarregamento += Time.deltaTime;
 
-        	if(tempoCarregamento>=5){
-                    //som de vitoria
-                    //canvas de vitoria
+        	if(tempoCarregamento>= 10){
+                    
+                    
         		ativarCarregamento = false;
-        		Application.LoadLevel(0);
+                        CanvasObject.GetComponent<Canvas>().enabled = false;
+        		SceneManager.LoadScene(0);
         	}
         }
 
     
     }
-    void OnGUI(){
+    /*void OnGUI(){
     	cor.a =(int)(tempoCarregamento);
     	GUI.color = cor;
     	GUI.DrawTexture(new Rect (0,0,Screen.width,Screen.height),textura);
-    }
+    }*/
     
     
     private void CheckAlive()
     {
         if(lifez1<= 0 && lifez2 <=0){
             //Você Venceu
+            audioSourceFim.Play();
             ativarCarregamento = true;
+            //Time.timeScale = 0.0f;
             Debug.Log("Player Venceu");
+            CanvasObject.GetComponent<Canvas>().enabled = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            //som de vitoria
+            //canvas de vitoria
+            
     
         } 
         

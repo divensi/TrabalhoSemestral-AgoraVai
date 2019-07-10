@@ -21,11 +21,14 @@ public class PlayerEnergyController : MonoBehaviour
     public void AddScale (float valor)
     {
         scale += valor;
+        power = power*scale;
+    
     }
 
     public  void RemoveScale (float valor)
     {
         scale -= valor;
+        power = power/scale;
     }
 
     public  float GetScale ()
@@ -35,17 +38,18 @@ public class PlayerEnergyController : MonoBehaviour
     }
     public  void AddPower (float valor)
     {
-        power += valor*scale;
+        power += valor;
     }
 
     public  void RemovePower (float valor)
     {
+        Debug.Log("removeu :"+valor);
         power -= valor;
     }
   	public  float GetPower ()
     {
         //*scale usado para permitir na fase final com o poder de aumento de scala poder pegar objetos com grande massa.
-        return power*scale;
+        return power;
      
     }
 
