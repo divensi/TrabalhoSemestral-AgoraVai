@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class ZombieWalk : MonoBehaviour
 {
 
@@ -26,6 +28,7 @@ public class ZombieWalk : MonoBehaviour
     private bool inPause;
     private Object obSpawnPoints;
     private Transform spawnPoints;
+    private GameObject CanvasObject;
 
 
 
@@ -45,6 +48,9 @@ public class ZombieWalk : MonoBehaviour
         morreu = false;
         tempoCarregamento = 0.0f;
         ativarCarregamento = false;
+        CanvasObject = GameObject.Find("Canvas-Morte");
+        CanvasObject.GetComponent<Canvas>().enabled = false;
+        
         Player = GameObject.FindGameObjectWithTag("Player");
         agente = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
@@ -130,6 +136,7 @@ public class ZombieWalk : MonoBehaviour
                         audioSourceAttack.Play();
                         audioSourceGrito.Play();
                         ativarCarregamento = true;
+                        CanvasObject.GetComponent<Canvas>().enabled = true;
                         //chamar a cena do menu
                         //StartCoroutine(WaitForSceneLoad());
 
@@ -141,12 +148,12 @@ public class ZombieWalk : MonoBehaviour
         }
     }
 
-    void OnGUI()
+    /*void OnGUI()
     {
         cor.a = (int)(tempoCarregamento);
         GUI.color = cor;
         GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), textura);
-    }
+    }*/
 
 
     void Update()
@@ -177,6 +184,7 @@ public class ZombieWalk : MonoBehaviour
                 ativarCarregamento = false;
                 PlayerPrefs.SetFloat("energy", 0.0f);
                 Application.LoadLevel(0);
+                //CanvasObject.GetComponent<Canvas>().enabled = false;
             }
         }
 
