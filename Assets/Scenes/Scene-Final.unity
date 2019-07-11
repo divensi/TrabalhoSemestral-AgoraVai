@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.23236752, g: 0.23554039, b: 0.2723026, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -58373,6 +58373,16 @@ PrefabInstance:
       propertyPath: CanvasObject
       value: 
       objectReference: {fileID: 227069514}
+    - target: {fileID: 333537622328151676, guid: 0efc22f9349aabaa986749d9f3f46aea,
+        type: 3}
+      propertyPath: minThrowForce
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 333537622328151676, guid: 0efc22f9349aabaa986749d9f3f46aea,
+        type: 3}
+      propertyPath: maxThrowForce
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5471488051318594311, guid: 0efc22f9349aabaa986749d9f3f46aea,
         type: 3}
       propertyPath: indicadorPoder
