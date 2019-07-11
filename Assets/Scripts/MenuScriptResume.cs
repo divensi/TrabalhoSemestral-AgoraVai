@@ -51,6 +51,7 @@ public class MenuScriptResume : MonoBehaviour
     }
      public void Reiniciar()
     {
-        Application.LoadLevel(1);
+        SceneManager.LoadScene(1);
+        // Application.LoadLevel(1);
     }
 }

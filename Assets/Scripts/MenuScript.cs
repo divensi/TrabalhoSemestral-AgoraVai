@@ -20,7 +20,7 @@ public class MenuScript : MonoBehaviour
         #endif
     }
 
-    public void Iniciar(int cena)
+    public void Iniciar(string cena)
     {
         SceneManager.LoadScene(cena);
 

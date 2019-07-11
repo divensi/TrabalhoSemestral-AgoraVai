@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialController : MonoBehaviour
 {
@@ -11,22 +12,39 @@ public class TutorialController : MonoBehaviour
     public void ProximaPagina()
     {
         if (paginaAtual == paginas.Count - 1)
-            Debug.Log("Ultima Pagina");
+            RunGame();
         else
             paginaAtual++;
 
-        for (int i = 0; i < paginas.Count; i++) {
-            if (i == paginaAtual) 
-                paginas[paginaAtual].SetActive(true);
+        for (int i = 0; i < paginas.Count; i++)
+        {
+            if (i == paginaAtual)
+                paginas[i].SetActive(true);
             else
-                paginas[paginaAtual].SetActive(false);
+                paginas[i].SetActive(false);
         }
+    }
+
+    public void RunGame()
+    {
+        SceneManager.LoadScene("Scene1");
+
+        Debug.Log("rungame");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        Time.timeScale = 1f;
     }
 
     void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
+
+        if (paginas.Count > 0)
+        {
+            paginas[0].SetActive(true);
+        }
+
     }
 }
