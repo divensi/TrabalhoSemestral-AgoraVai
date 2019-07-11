@@ -222,6 +222,7 @@ public class ZombieWalk : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject, 5.0f);
+        PlayerEnergyController.MataJeremias();
     }
 
     private void SpawnRandomZombie()
