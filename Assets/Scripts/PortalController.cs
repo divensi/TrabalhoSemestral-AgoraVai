@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Video;
 
 public class PortalController : MonoBehaviour
 {
+    public AudioSource barulho;
+    public VideoPlayer video;
     private bool ativarCarregamento;
     private float tempoCarregamento;
     private GameObject CanvasObject;
@@ -16,26 +18,18 @@ public class PortalController : MonoBehaviour
         CanvasObject = GameObject.Find("Canvas-PassFase");
         CanvasObject.GetComponent<Canvas>().enabled = false;
     }
-    void OnTriggerEnter(Collider other){
-    	if(other.CompareTag("Player")){
-            CanvasObject.GetComponent<Canvas>().enabled = true;
-            SceneManager.LoadScene("Scene-Final");
-    	}
-    }
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-    if (ativarCarregamento == true)
+        if (other.CompareTag("Player"))
         {
-
-            tempoCarregamento += Time.deltaTime;
-
-            if (tempoCarregamento >= 6)
-            {
-                ativarCarregamento = false;
-                PlayerPrefs.SetFloat("energy", 0.0f);
-                Application.LoadLevel(0);
-                //CanvasObject.GetComponent<Canvas>().enabled = false;
-            }
+            barulho.Play();
+            video.Play();
+            CanvasObject.GetComponent<Canvas>().enabled = true;
+            Invoke("LoadScene", 7);
         }
+    }
+
+    void LoadScene() {
+        SceneManager.LoadScene("Scene-Final");
     }
 }
