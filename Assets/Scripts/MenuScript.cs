@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     void Start () {
         PlayerPrefs.SetFloat("energy", 0.0f);
+        PlayerPrefs.SetInt("jeremias", 0);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None; 
         //Time.timeScale = 1.0f; 

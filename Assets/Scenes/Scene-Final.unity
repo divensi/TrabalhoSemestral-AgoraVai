@@ -58883,7 +58883,12 @@ PrefabInstance:
         type: 3}
       propertyPath: indicadorPoder
       value: 
-      objectReference: {fileID: 85767335}
+      objectReference: {fileID: 1951141723}
+    - target: {fileID: 5471488051318594311, guid: 0efc22f9349aabaa986749d9f3f46aea,
+        type: 3}
+      propertyPath: indicadorJeremias
+      value: 
+      objectReference: {fileID: 1818043012}
     - target: {fileID: 333537621750208527, guid: 0efc22f9349aabaa986749d9f3f46aea,
         type: 3}
       propertyPath: m_RunSpeed
