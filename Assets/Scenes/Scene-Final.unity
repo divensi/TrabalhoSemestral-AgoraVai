@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.23236752, g: 0.23554039, b: 0.2723026, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3571,6 +3571,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7397,6 +7401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.644714
@@ -8111,6 +8119,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9401,6 +9413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.177368
@@ -10438,6 +10454,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14008,6 +14028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 362.5019
@@ -15007,6 +15031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.175049
@@ -15092,6 +15120,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15502,6 +15534,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19604,6 +19640,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 164.4892
@@ -20913,6 +20953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -68.36981
@@ -22050,6 +22094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -67.44702
@@ -22380,6 +22428,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24398,6 +24450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 501.9223
@@ -26371,6 +26427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -125.890594
@@ -26675,6 +26735,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28989,6 +29053,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.935547
@@ -30656,6 +30724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 492.75177
@@ -31164,6 +31236,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34351,7 +34427,7 @@ GameObject:
   - component: {fileID: 1252592092}
   m_Layer: 0
   m_Name: Interagiveis
-  m_TagString: Untagged
+  m_TagString: Pegavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36892,6 +36968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 443.01117
@@ -37772,6 +37852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 365.89606
@@ -38528,6 +38612,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42031,6 +42119,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47646,6 +47738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 133.55109
@@ -50453,6 +50549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60.411743
@@ -51355,6 +51455,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54979,6 +55083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
+      objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 140.36377
@@ -55615,6 +55723,10 @@ PrefabInstance:
     - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_Name
       value: Box (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810489975335934, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
+      propertyPath: m_TagString
+      value: Pegavel
       objectReference: {fileID: 0}
     - target: {fileID: 4713210816912622, guid: b62ff06be56d8eb49a19ca2417fd1b6b, type: 3}
       propertyPath: m_LocalPosition.x
